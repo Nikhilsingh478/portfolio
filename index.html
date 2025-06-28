@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NikhilSingh</title>
+  <link rel="stylesheet" href="./styles.css">
+  <!-- flaticon  -->
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/906/906324.png">
+  <!-- shery.js  -->
+  <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
+  <!-- remix icon  -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- GSAP CDN -->
+  <script src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+  <!-- SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body class="bg-black text-white">
+  <div class="font-bold" id="loader">
+    <h1 id="first">NIKHIL SINGH</h1>
+    <h1 id="second">CRAFTING SEAMLESS WEB EXPERIENCES</h1>
+    <h1 id="third">LOADING MAGIC FOR YOUR SCREEN!</h1>
+  </div>
+  <!-- =============================NavBar=================================== -->
+  <!-- Hamburger Menu -->
+  <button id="menu-toggle" class="menu-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Fullscreen Nav -->
+  <div id="fullscreen-nav" class="nav-overlay">
+    <div class="nav-content">
+      <div class="nav-left">
+        <div class="logo">Nikhil</div>
+        <div class="socials">
+          <a target="_blank"
+            href="https://www.linkedin.com/in/nikhil-singh-3524b4289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+            <p>Linkedin</p>
+          </a>
+          <a href="assets/Nikhil_Virendra_Singh_CV.pdf" download>
+            <p>Download CV</p>
+          </a>
+          <a target="_blank" href="https://www.instagram.com/nikhil1863singh?igsh=MWZ4bjJvdmdkcnhsMA==">
+            <p>Instagram</p>
+          </a>
+        </div>
+      </div>
+      <div class="nav-right">
+        <ul>
+          <div class="elem">
+            <a href="project-section">
+              <li>Projects</li>
+            </a>
+            <i class="ri-arrow-right-up-line"></i>
+          </div>
+          <div class="elem">
+            <a href="#about">
+              <li>About</li>
+            </a>
+            <i class="ri-arrow-right-up-line"></i>
+          </div>
+          <!-- <div class="elem">
+            <li>Team</li>
+            <i class="ri-arrow-right-up-line"></i>
+          </div> -->
+          <div class="elem">
+            <li>Socials</li>
+            <i class="ri-arrow-right-up-line"></i>
+          </div>
+          <!-- <div class="elem">
+            <li>Skills</li>
+            <i class="ri-arrow-right-up-line"></i>
+          </div> -->
+          <div class="elem">
+            <a href="#contact">
+              <li>Contact</li>
+            </a>
+            <i class="ri-arrow-right-up-line"></i>
+          </div>
+        </ul>
+        <div class="contact-info">
+          <p id="email1">neelsingh45940s@gmail.com</p>
+          <p id="mobile">9503378187</p>
+        </div>
+        <div id="popup" class="popup hidden">Mobile number copied to clipboard!</div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==============================backSection============================ -->
+  <section>
+    <div id="back">
+      <img loading="lazy" src="./assets/w2.jpg" alt="">
+    </div>
+  </section>
+
+  <!-- ============================project section================================ -->
+
+  <!-- ===================================project section=========================================== -->
+  <!-- ==============================about section============================ -->
+  <!-- Magic Scroll Popup -->
+  <div id="about" class="w-full bg-zinc-900">
+    <div id="parentt" class="relative top-0 left-0 w-full h-[700vh]">
+      <div class="w-full sticky top-0 left-0 h-screen">
+        <canvas id="frames_canvas" class="w-full h-screen" id="frame"></canvas>
+
+        <!-- Timeline Overlay -->
+        <div class="glass-container" id="timeline">
+          <div class="glass-card">🎓 B.Tech CSE Student (3rd Sem)</div>
+          <div class="glass-card">🧑‍💻 Frontend Dev + Canvas & GSAP Enthusiast</div>
+          <div class="glass-card">💡 Love crafting smooth, interactive UIs</div>
+          <!-- <div class="glass-card">🎨 Obsessed with animation & visual polish</div> -->
+          <div class="glass-card">🔧 Built 10+ frontend projects — from scratch & AI-assisted</div>
+          <div class="glass-card">🚀 Currently learning backend to become a full-stack dev</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="scrollPopup"
+    class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[100] bg-white/10 backdrop-blur-md text-white px-6 py-3 rounded-lg border border-white/20 text-xl font-semibold opacity-0 pointer-events-none transition-all duration-500">
+    ✨ Scroll to see magic
+  </div>
+
+
+  <!-- ==============================project section starts============================ -->
+<section class="py-16 bg-[#dbdde5] project-background">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12 text-[#506981]">My Projects</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Card Start -->
+      <div class="project-card group relative overflow-hidden rounded-xl shadow-lg">
+        <img src="./p-1.webp" alt="Project 1" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-white">
+          <p class="text-lg mb-4">Visit Project</p>
+          <a href="https://holi-parallax-by-nvs.vercel.app/" target="_blank" class="px-4 py-2 bg-[#98b0c9] text-sm font-semibold rounded hover:bg-[#506981] transition">Visit</a>
+        </div>
+      </div>
+      <!-- Card End -->
+
+      <!-- Repeat above card 8 more times -->
+      <div class="project-card group relative overflow-hidden rounded-xl shadow-lg">
+        <img src="./p-2.webp" alt="Project 2" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-white">
+          <p class="text-lg mb-4">Visit Project</p>
+          <a href="https://gooey-effect.vercel.app/" target="_blank" class="px-4 py-2 bg-[#59614b] text-sm font-semibold rounded hover:bg-[#7c8376] transition">Visit</a>
+        </div>
+      </div>
+
+      <div class="project-card group relative overflow-hidden rounded-xl shadow-lg">
+        <img src="./p-3.webp" alt="Project 3" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-white">
+          <p class="text-lg mb-4">Visit Project</p>
+          <a href="https://halloween-two-rho.vercel.app/" target="_blank" class="px-4 py-2 bg-[#c3dcea] text-sm font-semibold rounded hover:bg-[#98b0c9] transition">Visit</a>
+        </div>
+      </div>
+
+      <!-- More cards as needed -->
+      <div class="project-card group relative overflow-hidden rounded-xl shadow-lg">
+        <img src="./p-4.webp" alt="Project 4" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-white">
+          <p class="text-lg mb-4">Visit Project</p>
+          <a href="https://huuman.vercel.app/" target="_blank" class="px-4 py-2 bg-[#506981] text-sm font-semibold rounded hover:bg-[#c3dcea] transition">Visit</a>
+        </div>
+      </div>
+
+      <div class="project-card group relative overflow-hidden rounded-xl shadow-lg">
+        <img src="./p-6.webp" alt="Project 5" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-white">
+          <p class="text-lg mb-4">Visit Project</p>
+          <a href="https://neuro-theta.vercel.app/" target="_blank" class="px-4 py-2 bg-[#7c8376] text-sm font-semibold rounded hover:bg-[#59614b] transition">Visit</a>
+        </div>
+      </div>
+
+      <div class="project-card group relative overflow-hidden rounded-xl shadow-lg">
+        <img src="./p-5.webp" alt="Project 6" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-white">
+          <p class="text-lg mb-4">Visit Project</p>
+          <a href="https://god-of-war-blond.vercel.app/" target="_blank" class="px-4 py-2 bg-[#dbdde5] text-sm font-semibold rounded hover:bg-[#506981] transition">Visit</a>
+        </div>
+      </div>
+
+      <div class="project-card group relative overflow-hidden rounded-xl shadow-lg">
+        <img src="./p-7.webp" alt="Project 7" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-white">
+          <p class="text-lg mb-4">Visit Project</p>
+          <a href="https://music-player-app-zqak.vercel.app/" target="_blank" class="px-4 py-2 bg-[#98b0c9] text-sm font-semibold rounded hover:bg-[#506981] transition">Visit</a>
+        </div>
+      </div>
+
+      <div class="project-card group relative overflow-hidden rounded-xl shadow-lg">
+        <img src="./p-8.webp" alt="Project 8" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-white">
+          <p class="text-lg mb-4">Visit Project</p>
+          <a href="https://christmas-webpage.vercel.app/" target="_blank" class="px-4 py-2 bg-[#c3dcea] text-sm font-semibold rounded hover:bg-[#59614b] transition">Visit</a>
+        </div>
+      </div>
+
+      <div class="project-card group relative overflow-hidden rounded-xl shadow-lg">
+        <img src="./p-9.webp" alt="Project 9" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-white">
+          <p class="text-lg mb-4">Visit Project</p>
+          <a href="https://lumina-glass-scroll.vercel.app/" target="_blank" class="px-4 py-2 bg-[#506981] text-sm font-semibold rounded hover:bg-[#c3dcea] transition">Visit</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ==============================project section ends============================ -->
+
+
+
+  <!-- ==============================contact me============================ -->
+  <!-- ✅ Contact Section -->
+  <section id="contact" class="relative h-screen w-full overflow-hidden">
+
+    <!-- 🔳 Background Image -->
+    <div class="absolute inset-0 z-0 contact-img">
+      <img loading="eager" src="./assets/w3.jpg" alt="bg" class="w-full h-full object-cover brightness-100" />
+      <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+
+    <!-- 🔳 Glassmorphism Contact Form -->
+    <div class="relative z-10 flex items-center justify-center h-full px-4 py-10">
+      <div id="contact-card"
+        class="w-full max-w-5xl bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-10 sm:p-14 shadow-2xl">
+
+        <h2 id="contact-title" class="text-white text-4xl sm:text-5xl font-semibold mb-10 text-center tracking-wide">
+          Get In Touch
+        </h2>
+
+        <form id="contact-form" class="space-y-6">
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-sm font-medium">Your Name</label>
+              <input type="text" id="name" name="user_name" required
+                class="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 mt-2 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/40"
+                placeholder="e.g. Nikhil" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium">Email Address</label>
+              <input type="email" id="email" name="user_email" required
+                class="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 mt-2 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/40"
+                placeholder="e.g. you@example.com" />
+            </div>
+          </div>
+
+          <div>
+            <label for="phone" class="block text-sm font-medium">Phone Number</label>
+            <input type="tel" id="phone" name="user_phone" required
+              class="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 mt-2 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/40"
+              placeholder="e.g. +91-9876543210" />
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium">Message</label>
+            <textarea id="message" name="message" rows="4" required
+              class="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 mt-2 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/40"
+              placeholder="Type your message here..."></textarea>
+          </div>
+
+          <div class="text-center pt-4">
+            <button type="submit"
+              class="bg-white/30 text-white px-8 py-3 rounded-lg text-lg font-medium border border-white/30 hover:bg-white/40 transition-all duration-300">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+
+  <!-- ✅ EmailJS & GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <!-- Three.js Core -->
+  <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/"
+        }
+    }
+</script>
+
+  <script type="module" src="./script.js" defer></script>
+</body>
+
+</html>
